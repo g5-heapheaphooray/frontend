@@ -96,8 +96,10 @@ class OpportunitiesComponent extends Component {
       return 4;
     } else if (width < 1025) {
       return 6;
-    } else {
+    } else if (width < 2000) {
       return 8;
+    } else {
+      return 10;
     }
   };
 
@@ -373,7 +375,7 @@ class OpportunitiesComponent extends Component {
                     </figure>
                     <div className="card-body">
                       <div className="card-title">
-                        <h2 className="card-title">{item.name}</h2>
+                        <h2 className="card-title w-full">{item.name}</h2>
                         <div className="badge badge-accent">
                           {item.neededManpowerCount} Spots left
                         </div>
